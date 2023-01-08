@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Fernando Peralta</title>
-</head>
-<body>
-	<slot />
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fernando Peralta</title>
+	</head>
+	<body>
+		<slot />
+	</body>
 </html>
 
 <style lang="scss" is:global>
-	*{
+	* {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		scroll-behavior: smooth;
+	}
+	@keyframes bg {
+		0% {
+			background-position: left;
+		}
+		25% {
+			background-position: right;
+		}
+		50% {
+			background-position: bottom;
+		}
+		75% {
+			background-position: top;
+		}
+		100% {
+			background-position: center;
+		}
+	}
+	body {
+		background: rgb(218, 128, 228);
+		background: linear-gradient(
+			90deg,
+			rgba(218, 128, 228, 1) 0%,
+			rgba(240, 29, 104, 1) 35%,
+			rgba(146, 31, 240, 1) 75%,
+			rgba(168, 22, 130, 1) 100%
+		);
+		padding: 0.2em;
+		background-size: 600%;
+		animation: bg 6s;
+		animation-iteration-count: infinite;
+	}
+	.color-dark {
+		color: white;
+	}
+	.color-light {
+		color: black;
 	}
 </style>

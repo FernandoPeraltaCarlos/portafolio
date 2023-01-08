@@ -1,7 +1,18 @@
 ---
 import Main from '../layouts/Main.astro';
+import Nav from '../components/Nav.astro';
 ---
 
 <Main>
-	<h1>Hola mundo</h1>
+	<main>
+		<Nav></Nav>
+	</main>
 </Main>
+
+<style lang="scss">
+	main{
+		background-color: black;
+		min-height: 100vh;
+		padding: .1em;
+	}
+</style>

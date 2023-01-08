@@ -1,0 +1,68 @@
+---
+let opciones = [
+    {
+        opcion:"Inicio",
+        destino:"#"
+    },
+    {
+        opcion:"Sobre mi",
+        destino:"#"
+    },
+    {
+        opcion:"Experiencia",
+        destino:"#"
+    },
+    {
+        opcion:"Portafolio",
+        destino:"#"
+    },
+    {
+        opcion:"Contacto",
+        destino:"#"
+    }
+];
+---
+
+<nav>
+    <ul>
+        {
+            opciones.map(opcion => (
+                <li class="menu-opcion"><a class="color-dark" href={opcion.destino}>{opcion.opcion}</a></li>
+            ))
+        }
+    </ul>
+    <div>
+        <span></span>
+    </div>
+</nav>
+
+<style lang="scss">
+    nav{
+        width: 100%;
+        padding: 2em 1em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        ul{
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            li{
+                a{
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+</style>
